@@ -1643,6 +1643,10 @@ class NuQJobGroup {
         "nuq.group_id": id,
       });
 
+      if (!isUUID(id)) {
+        return null;
+      }
+
       const start = Date.now();
       try {
         const result = this.rowToGroup(
