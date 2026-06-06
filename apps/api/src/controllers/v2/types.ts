@@ -1462,6 +1462,7 @@ export type MapResponse =
   | ErrorResponse
   | {
       success: true;
+      id: string;
       links?: MapDocument[];
       warning?: string;
     };
