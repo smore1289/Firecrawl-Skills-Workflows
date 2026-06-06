@@ -511,6 +511,8 @@ export interface DocumentMetadata {
   statusCode?: number;
   scrapeId?: string;
   numPages?: number;
+  pagesProcessed?: number;
+  originalTotalPages?: number;
   contentType?: string;
   timezone?: string;
   proxyUsed?: "basic" | "stealth";
