@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - name: Install pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
           version: 10
       - name: Audit NPM Packages
@@ -76,7 +76,7 @@ jobs:
           docker build -t firecrawl/nuq-postgres:latest ./apps/nuq-postgres
           docker run -d -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=postgres --name postgres firecrawl/nuq-postgres:latest
       - name: Install pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
           version: 10
       - name: Set up Node.js
@@ -222,7 +222,7 @@ jobs:
           tags: tag:ci
           use-cache: 'true'
       - name: Install pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
           version: 10
       - name: Set up Node.js
